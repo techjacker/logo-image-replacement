@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]>
+	<html class="no-js ie iem7 lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+
+<!--[if lt IE 7]>
+	<html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+
+<!--[if IE 7&!(IEMobile)]>
+	<html class="no-js ie ie7 lt-ie9 lt-ie8" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+
+<!--[if IE 8&!(IEMobile)]>
+	<html class="no-js ie ie8 lt-ie9" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+
+<!--[if (IE 9)|(gt IEMobile 7)]>
+	<html class="no-js ie ie9 gtiem7" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<![endif]-->
+
+<!--[if !IE]><!-->
+	<html class="no-js" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+	<link rel="stylesheet" type="text/css" href="build.css">
+	<title>logo-image-replacement</title>
+
+</head>
+	<body class="wrapper">
+
+		<script type="text/javascript" src="build.js"></script>
+		<script type="text/javascript">
+			var mod = require('logo-image-replacement');
+			document.write(mod({
+				sitename:'test site',
+				tagline:'tagline',
+				homepage:'#',
+			}));
+		</script>
+
+	</body>
+</html>

@@ -2,12 +2,22 @@
 
 Logo Image Replacement Template
 
-
 ### Install
 
 ```Shell
-component install logo-image-replacement
+component install techjacker/logo-image-replacement
 ```
+
+### Demo
+
+```Shell
+make server
+```
+
+Visit local demo @ [http://localhost:3000](http://localhost:3000)
+
+
+
 ## License
 Copyright (c) 2013 Andrew Griffiths <mail@andrewgriffithsonline.com>
 

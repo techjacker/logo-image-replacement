@@ -73,12 +73,14 @@ server-test test-browser: npm-install-dev components
 
 ############## public ################
 public: build $(PUBLIC_ALL)
-public-quick: build-quick $(PUBLIC_ALL)
+public-quick: build-quick $(PUBLIC_ALL) public-images
 
 $(PUBLIC_COMPILED_MIN): $(BUILD_COMPILED_MIN)
 	@cp -f $< $@
+	@echo $< $@
 
 $(PUBLIC_COMPILED): $(BUILD_COMPILED)
+	@echo $< $@
 	@cp -f $< $@
 
 $(PUBLIC_COMPILED_CSS): $(BUILD_COMPILED_CSS)
@@ -86,11 +88,15 @@ $(PUBLIC_COMPILED_CSS): $(BUILD_COMPILED_CSS)
 
 $(PUBLIC_COMPILED_CSS_MIN): $(BUILD_COMPILED_CSS_MIN)
 	@cp -f $< $@
+
+public-images:
+	@for d in $(wildcard $(BUILD_DIR)/*); do \
+		[ -d $$d ] && cp -r $$d public/; \
+	done
+
 ############## build ################
 # build: templates components npm-install-dev $(BUILD_COMPILED_MIN)
-# BUILD_DEPS = templates $(BUILD_COMPILED_MIN) $(BUILD_COMPILED_STANDALONE)
-BUILD_DEPS = templates $(BUILD_COMPILED_CSS_MIN)
-# BUILD_DEPS = $(BUILD_COMPILED_MIN)
+BUILD_DEPS = templates $(BUILD_COMPILED_CSS_MIN) $(BUILD_COMPILED_MIN)
 build: clean components npm-install-dev $(BUILD_DEPS)
 build-quick: clean-build $(BUILD_DEPS)
 
@@ -145,4 +151,4 @@ clean-build:
 clean-readme:
 	@find $(DOCS_TMPL_DIR) -maxdepth 1 -type f ! -iname '*.tmpl' -delete
 
-.PHONY: readme clean clean-* npm-install-dev release size server *-quick boil
+.PHONY: readme clean clean-* npm-install-dev release size server *-quick boil public-images
