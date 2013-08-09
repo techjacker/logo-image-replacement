@@ -1,0 +1,19 @@
+{
+  "name": "logo-image-replacement",
+  "version": "0.0.1",
+  "description": "Logo Image Replacement Template & CSS",
+  "repo": "techjacker/logo-image-replacement",
+  "remotes": [],
+  "dependencies": {},
+  "development": {},
+  "main": "lib/main.js",
+  "scripts": [
+    "lib/main.js",
+    "tmpl/template.tmpl.js"
+  ],
+  "images": ["img/logo.png"],
+  "local": [],
+  "styles": [
+    "css/styles.css"
+  ]
+}
