@@ -16,5 +16,5 @@ module.exports = function anonymous(obj) {
     return '';
   };
 
-  return "<header role=\"banner\" id=\"logo\" class=\"container\">\n	<hgroup>\n		<h1><a class=\"ir logo\" href=\"" + escape(obj.homepage) + "\">" + escape(obj.sitename) + "</a></h1>\n		<h2 class=\"visuallyhidden\">" + escape(obj.tagline) + "</h2>\n	</hgroup>\n</header>"
+  return "<header role=\"banner\" id=\"logo\" class=\"container\">\n	<hgroup>\n		<h1><a class=\"ir logo\" href=\"" + escape(obj.homepage) + "\">" + escape(obj.sitename) + "</a></h1>\n	</hgroup>\n</header>"
 }
